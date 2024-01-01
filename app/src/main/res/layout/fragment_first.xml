@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.mainactivity.FirstFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label">
+
+            <AutoCompleteTextView
+                android:id="@+id/menu_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                <com.furkanakdemir.surroundcardview.SurroundCardView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardBackgroundColor="@color/black"
+                    app:scv_duration="1000"
+                    app:scv_startPoint="bottom_start"
+                    app:scv_color="@color/black"
+                    app:scv_surrounded="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/humidity_textview"
+                        android:text="0.0"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="50sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Humidity"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                </com.furkanakdemir.surroundcardview.SurroundCardView>
+
+                <com.furkanakdemir.surroundcardview.SurroundCardView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardBackgroundColor="@color/black"
+                    app:scv_duration="1000"
+                    app:scv_startPoint="bottom_start"
+                    app:scv_color="@color/black"
+                    app:scv_surrounded="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/temperature_textview"
+                        android:text="0.0"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="50sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temperature"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                </com.furkanakdemir.surroundcardview.SurroundCardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/blue_lamp_imageView"
+                android:src="@drawable/lightbulb_off"
+                app:tint="@color/blue" />
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/blue_lamp_btn"
+                android:layout_gravity="center"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Switch ON"
+                android:backgroundTint="@color/blue"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/lightbulb_off"
+                android:id="@+id/red_lamp_imageView"
+                app:tint="@color/red"/>
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/red_lamp_btn"
+                android:layout_gravity="center"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/switch_on"
+                android:backgroundTint="@color/red"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
